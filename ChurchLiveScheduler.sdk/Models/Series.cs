@@ -1,45 +1,33 @@
 ﻿using System.Diagnostics;
-using System.Text.Json.Serialization;
 
 namespace ChurchLiveScheduler.sdk.Models;
 
 [DebuggerDisplay("Id={Id}, Name={Name}")]
-public record SeriesDto
+public sealed record SeriesDto
 {
-    [JsonPropertyName("id")]
-    public int Id { get; set; }
-
-    [JsonPropertyName("name")]
-    public string Name { get; set; } = null!;
-
-    [JsonPropertyName("day")]
-    public DayOfWeek Day { get; set; }
-
-    [JsonPropertyName("hours")]
-    public int Hours { get; set; }
-
-    [JsonPropertyName("minutes")]
-    public int Minutes { get; set; }
-
-    [JsonPropertyName("cancellations")]
-    public IEnumerable<CancellationDto>? Cancellations { get; set; }
+    public int Id { get; init; }
+    public string Name { get; init; } = null!;
+    public DayOfWeek Day { get; init; }
+    public int Hours { get; init; }
+    public int Minutes { get; init; }
+    public IEnumerable<CancellationDto>? Cancellations { get; init; }
 }
 
 [DebuggerDisplay("Name={Name}")]
-public class UpdateSeriesRequest
+public sealed record UpdateSeriesRequest
 {
-    public string Name { get; set; }
-    public DayOfWeek Day { get; set; }
-    public int Hours { get; set; }
-    public int Minutes { get; set; }
+    public required string Name { get; init; }
+    public required DayOfWeek Day { get; init; }
+    public required int Hours { get; init; }
+    public required int Minutes { get; init; }
 }
 
 [DebuggerDisplay("Name={Name}")]
-public class UpdateSeriesResponse
+public sealed record UpdateSeriesResponse
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public DayOfWeek Day { get; set; }
-    public int Hours { get; set; }
-    public int Minutes { get; set; }
+    public required int Id { get; init; }
+    public required string Name { get; init; }
+    public required DayOfWeek Day { get; init; }
+    public required int Hours { get; init; }
+    public required int Minutes { get; init; }
 }

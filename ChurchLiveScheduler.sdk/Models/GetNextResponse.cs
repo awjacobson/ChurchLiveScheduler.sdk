@@ -1,7 +1,7 @@
 ﻿namespace ChurchLiveScheduler.sdk.Models;
 
-public class GetNextResponse
+public sealed record GetNextResponse
 {
-    public string? Name { get; set; }
-    public DateTime Start { get; set; }
+    public string? Name { get; init; }
+    public DateTime Start { get; init; }
 }

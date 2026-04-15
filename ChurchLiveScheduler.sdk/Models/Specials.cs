@@ -1,74 +1,47 @@
 ﻿using System.Diagnostics;
-using System.Text.Json.Serialization;
 
 namespace ChurchLiveScheduler.sdk.Models;
 
-public record SpecialDto
+public sealed record SpecialDto
 {
-    [JsonPropertyName("id")]
-    public int Id { get; init; }
-
-    [JsonPropertyName("date")]
-    public string Date { get; init; } = null!;
-
-    [JsonPropertyName("name")]
-    public string Name { get; set; } = null!;
+    public required int Id { get; init; }
+    public required DateTime DateTime { get; init; }
+    public required string Name { get; init; }
 }
 
-[DebuggerDisplay("Date={Date}, Name={Name}")]
-public record CreateSpecialRequest
+[DebuggerDisplay("DateTime={DateTime}, Name={Name}")]
+public sealed record CreateSpecialRequest
 {
-    [JsonPropertyName("date")]
-    public string? Date { get; init; }
-
-    [JsonPropertyName("name")]
-    public string? Name { get; init; }
+    public required DateTime DateTime { get; init; }
+    public required string Name { get; init; }
 }
 
-[DebuggerDisplay("Date={Date}, Name={Name}")]
-public record CreateSpecialResponse
+[DebuggerDisplay("DateTime={DateTime}, Name={Name}")]
+public sealed record CreateSpecialResponse
 {
-    [JsonPropertyName("id")]
-    public int Id { get; init; }
-
-    [JsonPropertyName("date")]
-    public string Date { get; init; } = null!;
-
-    [JsonPropertyName("name")]
-    public string Name { get; init; } = null!;
+    public required int Id { get; init; }
+    public required DateTime DateTime { get; init; }
+    public required string Name { get; init; }
 }
 
-[DebuggerDisplay("Date={Date}, Name={Name}")]
-public record UpdateSpecialRequest
+[DebuggerDisplay("DateTime={DateTime}, Name={Name}")]
+public sealed record UpdateSpecialRequest
 {
-    [JsonPropertyName("date")]
-    public string? Date { get; init; }
-
-    [JsonPropertyName("name")]
-    public string? Name { get; init; }
+    public required DateTime DateTime { get; init; }
+    public required string Name { get; init; }
 }
 
-[DebuggerDisplay("Date={Date}, Name={Name}")]
-public record UpdateSpecialResponse
+[DebuggerDisplay("DateTime={DateTime}, Name={Name}")]
+public sealed record UpdateSpecialResponse
 {
-    [JsonPropertyName("id")]
-    public int Id { get; init; }
-
-    [JsonPropertyName("date")]
-    public string Date { get; init; } = null!;
-
-    [JsonPropertyName("name")]
-    public string Name { get; init; } = null!;
+    public required int Id { get; init; }
+    public required DateTime DateTime { get; init; }
+    public required string Name { get; init; }
 }
 
-public record DeleteSpecialResponse
+public sealed record DeleteSpecialResponse
 {
-    [JsonPropertyName("id")]
-    public int Id { get; init; }
-
-    [JsonPropertyName("date")]
-    public string Date { get; init; } = null!;
-
-    [JsonPropertyName("name")]
-    public string Name { get; init; } = null!;
+    public required int Id { get; init; }
+    public required DateTime DateTime { get; init; }
+    public required string Name { get; init; }
 }
