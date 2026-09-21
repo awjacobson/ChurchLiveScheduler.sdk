@@ -11,6 +11,11 @@ Console.WriteLine(JsonSerializer.Serialize(next));
 
 ## Version History
 
+### 1.1.0 - 2026-09-21
+
+- Switched to Source Generation to support Native AOT and trimmed apps
+- target framework changed from .NET 8.0 to .NET 10.0
+
 ### 1.0.8 - 2026-04-14
 
 - This README.md file added.
