@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -10,7 +10,7 @@
     <Authors>Aaron Jacobson</Authors>
     <Company />
     <Description>ChurchLiveScheduler client for .NET</Description>
-    <AssemblyVersion>1.0.8</AssemblyVersion>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <PackageProjectUrl>https://github.com/awjacobson/ChurchLiveScheduler.sdk</PackageProjectUrl>
